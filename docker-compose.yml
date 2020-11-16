@@ -1,0 +1,32 @@
+version: "3.5"
+services:
+  web:
+    build:
+      context: .
+      dockerfile: ./docker/Dockerfile
+      args:
+        environment: dev
+    command: sh -c "make start"
+    volumes:
+      - ./:/srv/app/
+    stdin_open: true
+    tty: true
+    networks:
+      - app
+    depends_on:
+      - mysql
+      
+  mysql:
+    image: mysql
+    environment:
+      MYSQL_DATABASE: modec_db
+      MYSQL_USER: root
+      MYSQL_ROOT_PASSWORD: ""
+      MYSQL_ALLOW_EMPTY_PASSWORD: "yes"
+    networks:
+      - app
+    volumes:
+      - ./docker/mysql/init:/docker-entrypoint-initdb.d
+
+networks:
+  app:

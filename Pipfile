@@ -1,0 +1,25 @@
+[[source]]
+name = "pypi"
+url = "https://pypi.org/simple"
+verify_ssl = true
+
+[dev-packages]
+pylama = "==7.*"
+coverage = ">=4.5.3"
+codecov = ">=2.0.15"
+autopep8 = "*"
+rope = "*"
+pdbpp = "*"
+pylint = "==2.*"
+
+[packages]
+Django = "*"
+gunicorn = "*"
+mysqlclient = "*"
+djangorestframework = "*"
+markdown = "*"
+django-filter = "*"
+drf-nested-routers = "*"
+
+[requires]
+python_version = "3.8"
