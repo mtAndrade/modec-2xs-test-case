@@ -59,8 +59,12 @@ docker-test:
 docker-logs:
 	@${DOCKER_CMD} logs -f --tail=30 web
 
-docker-migrate:
+docker-migrate: wait-db-start
 	@${DOCKER_CMD} run --rm web make migrate
 
 docker-test-coverage:
 	@${DOCKER_CMD} run --rm web make test-coverage
+
+wait-db-start:
+	@echo "Waiting db start"
+	@sleep 10
