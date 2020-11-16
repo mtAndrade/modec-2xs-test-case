@@ -35,10 +35,10 @@ In this section I will describe the technologies used in the project and the rea
 ### Django & Django REST
 
 As specified in the email, Python was mandatory.
-For that reason I chose Django. A framework with good documentation, community market adhesion even though I had never worked with it I was confident that it would be a safe and effective choice.
+For that reason I chose Django. Even though I had never worked with it, Django is a framework with good documentation, community and market adhesion and for that I was confident that it would be a safe and effective choice.
 After little research I found the Django Rest Framework. It is a powerful and flexible toolkit for building Web APIs and given the test's requirements seemed like a perfect fit.
 
-I chose a stable yet recent Python version that met all Django's requirements
+I chose a stable yet recent enought Python version that met all Django's requirements
 
 ### MySQL Database
 
@@ -75,7 +75,7 @@ I chose to make a resource that receives a list of codes and therefore can recei
  ### Final notes
  I had quite a bit of fun with this little project. It is quite simple and yet it made me study most of what the framework I chose to work on had to offer. Django really have a unique project structure and I found it quite interesting.
 
- This project could benefit from some improvements like a CI/CD, better input validation, logging and  more tests, because there is no such thing as too many tests.
+ This project could benefit from some improvements like a CI/CD, better input validation, logging, coverage, linter and  more tests, because there is no such thing as too many tests.
 
 
 
